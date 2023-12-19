@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementsian legislative database</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Elementsian legislative database</h1>
+
+  <div class="filter-container">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterLegislation()">
+      <option value="">All</option>
+      <option value="ecology">Ecology</option>
+      <option value="industry">Industry</option>
+      <option value="economy">Economy</option>
+      <option value="military">Military</option>
+      <option value="political">Political</option>
+      <option value="internal-affairs">Internal Affairs</option>
+    </select>
+
+    <label for="actFilter">Filter by Act:</label>
+    <select id="actFilter" onchange="filterLegislation()">
+      <option value="">All</option>
+      <option value="Act 1">Act 1</option>
+      <option value="Act 2">Act 2</option>
+      <!-- Add more options for Acts as needed -->
+      <option value="Act 3">Act 3</option>
+      <option value="Act 4">Act 4</option>
+      <option value="Act 5">Act 5</option>
+      <option value="Act 6">Act 6</option>
+      <option value="Act 7">Act 7</option>
+      <option value="Act 8">Act 8</option>
+      <option value="Act 9">Act 9</option>
+      <option value="Act 10">Act 10</option>
+      <option value="Act 11">Act 11</option>
+      <option value="Act 12">Act 12</option>
+      <option value="Act 13">Act 13</option>
+      <option value="Act 14">Act 14</option>
+      <option value="Act 15">Act 15</option>
+      <option value="Act 16">Act 16</option>
+      <option value="Act 17">Act 17</option>
+      <!-- Add more options for Acts as needed -->
+    </select>
+
+    <label for="searchInput">Search:</label>
+    <input type="text" id="searchInput" oninput="filterLegislation()">
+  </div>
+
+  <ul id="legislation-list"></ul>
+
+  <div class="add-legislation">
+    <label for="titleInput">Title:</label>
+    <input type="text" id="titleInput">
+    
+    <label for="categoryInput">Category:</label>
+    <select id="categoryInput">
+      <option value="ecology">Ecology</option>
+      <option value="industry">Industry</option>
+      <option value="economy">Economy</option>
+      <option value="military">Military</option>
+      <option value="political">Political</option>
+      <option value="internal-affairs">Internal Affairs</option>
+    </select>
+
+    <label for="actSelect">Choose an Act:</label>
+    <select id="actSelect">
+      <option value="Act 1">Act 1</option>
+      <option value="Act 2">Act 2</option>
+      <!-- Add more options for Acts as needed -->
+      <option value="Act 3">Act 3</option>
+      <option value="Act 4">Act 4</option>
+      <option value="Act 5">Act 5</option>
+      <option value="Act 6">Act 6</option>
+      <option value="Act 7">Act 7</option>
+      <option value="Act 8">Act 8</option>
+      <option value="Act 9">Act 9</option>
+      <option value="Act 10">Act 10</option>
+      <option value="Act 11">Act 11</option>
+      <option value="Act 12">Act 12</option>
+      <option value="Act 13">Act 13</option>
+      <option value="Act 14">Act 14</option>
+      <option value="Act 15">Act 15</option>
+      <option value="Act 16">Act 16</option>
+      <option value="Act 17">Act 17</option>
+      <!-- Add more options for Acts as needed -->
+    </select>
+    <br>
+    
+    <label for="contentEditor">Content:</label>
+    <div class="text-editor" id="contentEditor" contenteditable="true" onpaste="handlePaste(event)"></div>
+
+    <div class="editor-controls">
+      <button onclick="executeCommand('bold')"><strong>B</strong></button>
+      <button onclick="executeCommand('italic')"><em>I</em></button>
+      <button onclick="executeCommand('underline')"><u>U</u></button>
+      <button onclick="executeCommand('justifyCenter')">Center</button>
+      <button onclick="changeTextColor()">Change Color</button>
+    </div>
+
+    <button onclick="addLegislation()">Add Legislation</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

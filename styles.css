@@ -1,0 +1,180 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: fadeInLeft 1s ease-out;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  select,
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    animation: fadeInRight 1s ease-out;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .add-legislation {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .text-editor {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+    min-height: 100px;
+    overflow-y: auto;
+  }
+  
+  .editor-controls {
+    margin-top: 10px;
+  }
+  
+  .editor-controls button {
+    padding: 8px;
+    margin-right: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    animation: fadeIn 1s ease-out;
+  }
+  .editor-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .editor-controls button {
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Adjust the styling of text-editor for better alignment */
+  .text-editor {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+    min-height: 100px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-editor p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .text-editor .editor-controls {
+    margin-top: auto; /* Align controls to the bottom */
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .filter-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    select,
+    input[type="text"] {
+      width: 48%;
+    }
+  }
+  
